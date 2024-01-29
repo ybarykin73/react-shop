@@ -13,7 +13,7 @@ module.exports = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['', '.ts', '.tsx', '.js', '.jsx']
+    extensions: ['', '.ts', '.tsx', '.js', '.jsx', 'css', 'scss', 'sass']
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -33,8 +33,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.(png|jpg|jpef|gif)$/i,
