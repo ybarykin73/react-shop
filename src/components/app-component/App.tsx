@@ -1,13 +1,13 @@
-import { BrowserRouter, Link } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import Pages from '../pages/pages'
-import './style.css'
+import Header from '../header/header'
+import './style.scss'
 
 const App = () => {
   return (
     <BrowserRouter>
-       <Link to={'/cart'} > cart</Link>
-       <Link to={'/'} > home</Link>
-       <Pages />
+      <Header />
+      <Pages />
     </BrowserRouter>
   )
 }

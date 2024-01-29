@@ -1,0 +1,25 @@
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-decoration: none;
+  color: var(--text-color);
+
+  &:hover {
+    color: inherit;
+  }
+
+  &__image {
+    color: #087ea4;
+    margin-inline-end: var(--medium-margin);
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+}

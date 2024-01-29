@@ -1,5 +1,31 @@
 :root {
+  // Padding
+  --tiny-padding: 5px;
+  --medium-padding: 10px;
+  --big-padding: 20px;
 
+  // Margin
+  --tiny-margin: 5px;
+  --medium-margin: 10px;
+
+  // Text
+  --text-color: #020202
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../assets/Roboto-Light.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../assets/Roboto-Medium.ttf');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
 
 *,
@@ -10,4 +36,13 @@
 
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 var(--medium-padding);
+  margin: 0 auto;
 }
