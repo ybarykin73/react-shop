@@ -2,14 +2,27 @@
   // Padding
   --tiny-padding: 5px;
   --medium-padding: 10px;
-  --big-padding: 20px;
+  --big-padding: 15px;
+  --huge-padding: 20px;
 
   // Margin
   --tiny-margin: 5px;
   --medium-margin: 10px;
+  --big-margin: 15px;
+  --huge-margin: 20px;
 
   // Text
-  --text-color: #020202
+  --text-color: #020202;
+  --white-color: #fff;
+
+  // Border radius
+  --tiny-border-radius: 4px;
+  --medium-border-radius: 8px;
+  --big-border-radius: 12px;
+  --huge-border-radius: 50%;
+
+  // Color
+  --primary-color: #087ea4;
 }
 
 @font-face {
