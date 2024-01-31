@@ -53,9 +53,53 @@ body {
   font-weight: 400;
 }
 
+.title {
+  font-weight: bold;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
   padding: 0 var(--medium-padding);
   margin: 0 auto;
+}
+
+.placeholder {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 12px 10px #fff;
+    animation: placeholderAnimation 3s linear infinite;
+  }
+
+  &__title {
+    height: 40px;
+    background-color: #eee;
+    margin-bottom: var(--big-margin);
+  }
+
+  &__item {
+    background-color: #eee;
+  }
+}
+
+@keyframes placeholderAnimation {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: calc(100% - 20px);
+  }
+  100% {
+    left: 0;
+  }
 }

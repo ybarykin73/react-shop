@@ -1,0 +1,22 @@
+.product-grid {
+  margin-bottom: 40px;
+
+  &__headline {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  &__title {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+  }
+}

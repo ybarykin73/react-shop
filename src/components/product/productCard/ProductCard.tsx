@@ -1,5 +1,7 @@
 import React from "react"
 
+import { getPercent } from "../../../utils/getPercent"
+
 import Button from "../../subcomponents/button/Button"
 import Wishlist from "../../subcomponents/icons/Wishlist"
 
@@ -11,28 +13,35 @@ const ProductCard:React.FC<IProps> = (props) => {
   const {
     name,
     price,
-    image
+    image,
+    oldPrice
   } = props
 
   return (
     <div className="product-cart">
       <h3 className="product-cart__name">
-        Кроссовки Columbia <br /> Columbia
+        { name }
       </h3>
       <div className="product-cart__image">
-        <div className="product-cart__percent">-20%</div>
+        {
+          oldPrice 
+            && 
+          <div className="product-cart__percent">
+            -{getPercent(price, oldPrice)}%
+          </div>
+        }
         <img
           width='240'
           height='240'
           className="product-cart__img" 
-          src="../../../assets/image/product-1.jpg" 
-          alt="name" 
+          src={ image } 
+          alt={ name } 
         />
       </div>
       <div className="product-cart__main">
         <div className="product-cart__price">
-          <div className="product-cart__price--old">12 000 ₽</div>
-          <div className="product-cart__price--discount">10 000 ₽</div>
+          <div className="product-cart__price--old">{ oldPrice } ₽</div>
+          <div className="product-cart__price--discount">{ price } ₽</div>
         </div>
       </div>
       <div className="product-cart__tollbar">
