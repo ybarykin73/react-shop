@@ -1,0 +1,15 @@
+.error {
+  text-align: center;
+  padding: var(--big-padding);
+
+  &__title {
+    margin: 0;
+    margin-bottom: var(--big-margin);
+    font-size: 32px;
+  }
+
+  &__description {
+    font-size: 20px;
+    margin: 0;
+  }
+}
