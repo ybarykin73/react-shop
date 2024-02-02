@@ -1,11 +1,12 @@
 .category-block-placeholder {
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
   }
 
   &__item {
-    height: 300px;
+    height: 200px;
+    border-radius: var(--big-border-radius);
   }
 }

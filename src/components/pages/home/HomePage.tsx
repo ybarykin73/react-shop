@@ -4,10 +4,9 @@ import CategoryBlockContainer from "../../category/category-block/CategoryBlockC
 
 const HomePage = () => {
 
-
   return (
     <div className="container">
-      <CategoryBlockContainer id={1} />
+      <CategoryBlockContainer />
     </div>
   )
 }
