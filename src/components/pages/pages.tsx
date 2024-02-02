@@ -5,6 +5,7 @@ import CartPage from './cart/CartPage'
 import UserPage from './user/userPage'
 import OrdersPage from './orders/ordersPage'
 import WishlistPage from './wishlist/wishlistPage'
+import CategoryPage from './Category/CategoryPage'
 
 const Pages = () => {
   return (
@@ -14,6 +15,7 @@ const Pages = () => {
       <Route path='/user' element={<UserPage />} />
       <Route path='/orders' element={<OrdersPage />} />
       <Route path='/wishlist' element={<WishlistPage />} />
+      <Route path='/category/:categoryId' element={<CategoryPage />} />
     </Routes>
   )
 }
