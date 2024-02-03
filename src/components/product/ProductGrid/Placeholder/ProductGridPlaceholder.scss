@@ -1,0 +1,16 @@
+.product-grid-placeholder {
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+
+  &__item {
+    height: 400px;
+  }
+}

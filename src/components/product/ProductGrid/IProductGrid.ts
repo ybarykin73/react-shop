@@ -1,4 +1,8 @@
+import IProduct from "../../../entities/Products/IProduct"
+
 export interface IProps {
-  title: string
-  products: any
+  title: string,
+  error?: string,
+  isLoading: boolean,
+  products: Array<IProduct>
 }

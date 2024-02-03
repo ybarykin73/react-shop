@@ -1,5 +1,8 @@
-import React from "react"
+import React from 'react'
+
 import ProductCard from "../productCard/ProductCard"
+import ProductGridPlaceholder from './Placeholder/ProductGridPlaceholder'
+import Error from '../../subcomponents/Error/Error'
 
 import { IProps } from "./IProductGrid"
 import './ProductGrid.scss'
@@ -8,16 +11,26 @@ const ProductGrid:React.FC<IProps> = (props) => {
 
   const {
     title,
-    products
+    error,
+    products,
+    isLoading
   } = props
+
+  if (isLoading) {
+    return <ProductGridPlaceholder />
+  }
+
+  if(error) {
+    console.error(error)
+    return <Error />
+  }
 
   return (
     <section className="product-grid">
       <div className="product-grid__headline">
-        <h2 className="title product-grid__title">
+        <h2 className="title title--main product-grid__title">
           { title }
         </h2>
-        <a href="#">Смотреть все</a>
       </div>
       <div className="product-grid__body">
         {
