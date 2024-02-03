@@ -1,23 +1,15 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
+import IProduct from '../../entities/Products/IProduct'
 export interface ProductsState {
-  products: Array<Product>,
-  isloading: boolean
-  error: string
-}
-
-export type Product = {
-  id: number,
-  name: string,
-  image: string,
-  price: number,
-  oldPrice?: number,
-  categoryName: string
+  products: Array<IProduct>,
+  isLoading: boolean
+  error: string | null
 }
 
 const initialState : ProductsState = {
   products: [],
-  isloading: true,
-  error: ''
+  isLoading: true,
+  error: null
 }
 
 export const fetchProducts = createAsyncThunk(
@@ -36,14 +28,14 @@ const productsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {
-        state.isloading = true
+        state.isLoading = true
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
-        state.isloading = false
+        state.isLoading = false
         state.products = [...action.payload]
       })
       .addCase(fetchProducts.rejected, (state, action) => {
-        state.isloading = false
+        state.isLoading = false
         state.error = action.error.message
       })
   }
