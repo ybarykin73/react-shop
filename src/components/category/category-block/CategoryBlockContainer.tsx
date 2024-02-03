@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 
-import Error from "../../subcomponents/Error/Error"
-import CategoryBlock from "./CategoryBlock"
-import CategoryBlockPlaceholder from "./Placeholder/CategoryBlockPlaceholder"
+import Error from '../../subcomponents/Error/Error'
+import CategoryBlock from './CategoryBlock'
+import CategoryBlockPlaceholder from './Placeholder/CategoryBlockPlaceholder'
 
-import { IProps } from "./ICategoryBlockContainer"
+import { IProps } from './ICategoryBlockContainer'
 
 interface ICategory {
   id: number,
@@ -38,7 +38,7 @@ const CategoryBlockContainer:React.FC<IProps> = () => {
   }
 
   return (
-    <>
+    <section className='category-block'>
       {
         isLoading
         ?
@@ -48,7 +48,7 @@ const CategoryBlockContainer:React.FC<IProps> = () => {
             categories={category} 
           />
       }
-    </>
+    </section>
   )
 }
 
