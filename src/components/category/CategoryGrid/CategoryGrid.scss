@@ -1,0 +1,13 @@
+.category-grid {
+  @media screen and (min-width: 560px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+}

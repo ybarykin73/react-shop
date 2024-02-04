@@ -1,0 +1,10 @@
+.category-page {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-column-gap: 20px;
+  margin-bottom: 40px;
+
+  &__heading {
+    margin-bottom: var(--huge-margin);
+  }
+}

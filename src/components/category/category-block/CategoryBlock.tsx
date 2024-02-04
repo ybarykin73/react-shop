@@ -21,7 +21,10 @@ const CategoryBlock: React.FC<IProps> = (props) => {
             categories.map(item => {
               return (
                 <li key={item.id} className="category-block__list-item">
-                  <Link to={`./category/${item.id}`} >
+                  <Link 
+                    to={`./category/${item.categoryName}`}
+                    state={{name: item.name}}
+                  >
                     <div className="category-block__item">
                       <img
                         className="category-block__item-image"
