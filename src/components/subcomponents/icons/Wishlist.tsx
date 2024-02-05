@@ -1,6 +1,6 @@
 import React from "react"
 
-import {IProps} from "./IIcon"
+import { IProps } from "./IIcon"
 import './Icon.scss'
 
 const Wishlist:React.FC<IProps> = (props) => {

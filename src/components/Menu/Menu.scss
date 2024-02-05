@@ -1,0 +1,17 @@
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 46px);
+  grid-column-gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding: var(--tiny-padding);
+  }
+
+  &__item-link {
+    stroke: var(--primary-color);
+    color: var(--primary-color);
+  }
+}
