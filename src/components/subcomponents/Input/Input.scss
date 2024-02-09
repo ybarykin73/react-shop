@@ -1,0 +1,32 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+
+  &__label {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: var(--medium-margin);
+  }
+
+  &__field {
+    padding: var(--tiny-padding) var(--medium-padding);
+    border-radius: var(--tiny-border-radius);
+    border: none;
+    box-shadow: 0 0 0 2px var(--primary-color);
+    min-height: 40px;
+    margin-bottom: var(--medium-margin);
+    outline: none;
+  
+    &:focus {
+      box-shadow: 0 0 2px 2px var(--primary-color);
+    }
+  }
+
+  &__help-text {
+    font-size: 14px;
+    margin: 0;
+  }
+}
