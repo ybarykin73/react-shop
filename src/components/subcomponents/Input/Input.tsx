@@ -9,6 +9,7 @@ const Input: React.FC<IProps> = (props) => {
     type,
     name,
     label,
+    required = false, 
     helpText,
     handleChange
   } = props
@@ -20,6 +21,7 @@ const Input: React.FC<IProps> = (props) => {
     handleChange(e)
     setValue(e.value)
   }
+  
   return (
     <div className="input">
       {
@@ -35,6 +37,7 @@ const Input: React.FC<IProps> = (props) => {
         value={value}
         className="input__field"
         name={name}
+        required={required}
         onChange={(e) => changeInput(e.target)}
       />
       {
