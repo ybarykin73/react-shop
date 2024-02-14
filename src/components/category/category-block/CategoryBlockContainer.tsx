@@ -18,14 +18,14 @@ const CategoryBlockContainer:React.FC<IProps> = () => {
   const [error, setError] = React.useState(false)
 
   React.useEffect(() => {
-    fetchProducts()
+    fetchCategory()
   }, [])
 
-  const fetchProducts = async () => {
+  const fetchCategory = async () => {
     try {
-      const data = await fetch(`https://65b784b346324d531d54cffb.mockapi.io/category`)
+      const data = await fetch(`https://65b784b346324d531d54cffb.mockapi.io/shop/category`)
       const res = await data.json()
-      setCategory(res)
+      setCategory(res.items)
     } catch (error) {
       setError(true)
     } finally {
