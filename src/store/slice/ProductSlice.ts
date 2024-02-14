@@ -1,12 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import IProduct from '../../entities/Products/IProduct'
+
 export interface ProductsState {
   products: Array<IProduct>,
   isLoading: boolean
   error: string | null
 }
 
-const initialState : ProductsState = {
+const initialState: ProductsState = {
   products: [],
   isLoading: true,
   error: null
@@ -15,14 +16,14 @@ const initialState : ProductsState = {
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts' , 
   async () => {
-  const response = await fetch('https://65b784b346324d531d54cffb.mockapi.io/products')
+  const response = await fetch('https://65b784b346324d531d54cffb.mockapi.io/shop/products')
     const data = await response.json()
-    return data
+    return data.items
   }
 )
 
 const productsSlice = createSlice({
-  name: 'products',
+  name: 'Products',
   initialState,
   reducers: {},
   extraReducers: (builder) => {

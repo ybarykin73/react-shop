@@ -10,7 +10,7 @@ import './CategoryPage.scss'
 const CategoryPage = () => {
 
   const categoryName = useParams()
-  const storeProducts = useAppSelector(store => store.products)
+  const storeProducts = useAppSelector(store => store.Products)
   const {state} = useLocation()
 
   const {

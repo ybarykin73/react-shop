@@ -8,7 +8,7 @@ import './NewProducts.scss'
 
 const NewProducts = () => {
   const title = "Новые товары"
-  const storeProduct = useAppSelector(store => store.products)
+  const storeProduct = useAppSelector(store => store.Products)
   
   const {
     error,
