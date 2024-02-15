@@ -1,0 +1,17 @@
+.notification {
+  padding: var(--big-padding);
+  border: 2px solid;
+  border-radius: var(--medium-border-radius);
+
+  &--error {
+    background-color: rgba(255, 78, 78, .5);
+    border-color: #ff4e4e;
+    box-shadow: 0 0 2px 0 #ff4e4e;
+  }
+
+  &--success {
+    background-color: rgba(48, 255, 48, .5);
+    border-color: #30ff30;
+    box-shadow: 0 0 2px 0 #30ff30;
+  }
+}
