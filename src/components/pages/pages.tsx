@@ -7,6 +7,7 @@ import OrdersPage from './orders/ordersPage'
 import WishlistPage from './wishlist/wishlistPage'
 import CategoryPage from './Category/CategoryPage'
 import RegistrationPage from './User/RegistrationPage/RegistrationPage'
+import AccountPage from './User/Account/AccountPage'
 
 const Pages = () => {
   return (
@@ -18,6 +19,7 @@ const Pages = () => {
       <Route path='/category/:categoryId' element={<CategoryPage />} />
       <Route path='/auth/login' element={<LoginPage/>} />
       <Route path='/auth/registration' element={<RegistrationPage />} />
+      <Route path='/auth/account' element={<AccountPage />} />
     </Routes>
   )
 }

@@ -25,9 +25,14 @@ const AuthSlice = createSlice({
       state.user.uid = action.payload.id,
       state.user.email = action.payload.email
     },
+    authLoginUser(state, action) {
+      state.isLogged = true,
+      state.user.uid = action.payload.id,
+      state.user.email = action.payload.email
+    }
   }
 })
 
-export const {authSetUser} = AuthSlice.actions
+export const {authSetUser, authLoginUser} = AuthSlice.actions
 
 export default AuthSlice.reducer
