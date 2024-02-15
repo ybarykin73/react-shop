@@ -3,7 +3,7 @@ import React from "react"
 import { IProps } from "./IIcon"
 import './Icon.scss'
 
-const UserLogoutIcon: React.FC<IProps> = (props) => {
+const UserLoggedOutIcon: React.FC<IProps> = (props) => {
   const {
     width = 26,
     height = 26,
@@ -25,4 +25,4 @@ const UserLogoutIcon: React.FC<IProps> = (props) => {
   )
 }
 
-export default UserLogoutIcon
+export default UserLoggedOutIcon

@@ -1,7 +1,8 @@
 .form {
-  display: grid;
-  grid-row-gap: 10px;
-  max-width: 400px;
-  width: 100%;
-  margin: 0px auto;
+  
+  &__wrapper {
+    display: grid;
+    grid-row-gap: 10px;
+    margin-bottom: var(--huge-margin);
+  }
 }

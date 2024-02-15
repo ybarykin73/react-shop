@@ -1,0 +1,13 @@
+.registration-page {
+
+  &__title {
+    margin-bottom: 40px!important;
+  }
+
+  &__wrapper {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--big-padding);
+  }
+}
